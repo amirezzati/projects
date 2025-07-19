@@ -3,7 +3,7 @@
 
 ## Deep Learning Projects
 
-### [RAG for Psychological Applications](https://github.com/amirezzati/rag-psychology)
+### [Retrieval-Augmented Generation for Psychological Applications](https://github.com/amirezzati/rag-psychology)
 
 This project leverages Retrieval-Augmented Generation (RAG) to answer psychological questions and classify mental disorders based on renowned DSM-5 book. By combining the power of large language models with domain-specific datasets, the model provides accurate and relevant responses to specialized queries in the field of psychology.
 
