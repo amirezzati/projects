@@ -2,6 +2,11 @@
 
 
 ## Deep Learning Projects
+
+### [RAG for Psychological Applications](https://github.com/amirezzati/rag-psychology)
+
+This project leverages Retrieval-Augmented Generation (RAG) to answer psychological questions and classify mental disorders based on renowned DSM-5 book. By combining the power of large language models with domain-specific datasets, the model provides accurate and relevant responses to specialized queries in the field of psychology.
+
 ### [Self-Supervised Solar Panel Detection with DINO Vision Transformers](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW5/pract/Dino.ipynb)
 
 In this project, I applied the DINO (Self-Distillation with No Labels) model, a self-supervised Vision Transformer, to extract meaningful visual features from satellite imagery. By leveraging DINO's ability to learn representations without labeled data, I fine-tuned the model to classify images based on the presence of solar panels. Additionally, I analyzed the model's attention maps to estimate the size of solar panels in positive samples, providing insights into the model's focus areas during inference. This approach demonstrates the effectiveness of self-supervised learning in remote sensing applications, particularly in scenarios where labeled data is scarce.
@@ -29,6 +34,11 @@ In this notebook, I implement and train two foundational generative modeling par
 ### [From-Scratch SimpleGPT: A Mini Decoder-Only Transformer for Text Generation](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW3/pract/SimpleGPT.ipynb)
 
 In this project, I implemented and trained a compact, decoder-only Transformer (“SimpleGPT”) from the ground up using PyTorch. Beginning with raw text data ingestion and vocabulary construction, I built core components—including masked self-attention heads, multi-head attention, feed-forward layers, and positional embeddings—then assembled them into a SimpleGPT architecture. After configuring training hyperparameters, I optimized the model on the dataset for autoregressive language modeling, and demonstrated its capability by generating sample text continuations. This exercise deepened my understanding of Transformer internals and highlighted how even a scaled-down GPT can learn meaningful sequence patterns.
+
+
+### [An Odd Music Generator](https://github.com/amirezzati/music-generator)
+
+This project implements an interactive audio pipeline that continuously loops through four stages to produce a unique “odd” composition. First, incoming performance audio is denoised in real time to isolate the musician’s notes from background interference. Next, a note-recognition model tracks and encodes the sequence of notes played up to each moment. Those recognized notes feed into an RNN-based prediction module that forecasts the next note to be performed. Finally, a synthetic “noise maker” injects crowd cheering and whistles back into the mix, challenging the system’s denoiser and prediction modules. By combining signal processing, sequence modeling with RNNs, and generative audio synthesis, the pipeline yields a dynamic piece of music that evolves under simulated live-performance conditions.
 
 
 
