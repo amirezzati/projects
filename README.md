@@ -24,13 +24,22 @@ In this project, I built a full DDPM (Denoising Diffusion Probabilistic Model) p
 
 In this project, I implemented and trained a compact, decoder-only Transformer (“SimpleGPT”) from the ground up using PyTorch. Beginning with raw text data ingestion and vocabulary construction, I built core components—including masked self-attention heads, multi-head attention, feed-forward layers, and positional embeddings—then assembled them into a SimpleGPT architecture. After configuring training hyperparameters, I optimized the model on the dataset for autoregressive language modeling, and demonstrated its capability by generating sample text continuations. This exercise deepened my understanding of Transformer internals and highlighted how even a scaled-down GPT can learn meaningful sequence patterns.
 
-### [Exploring Variational Autoencoders and Generative Adversarial Networks on MNIST](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW4/pract/GAN-VAE.ipynb)
+### [Exploring Variational Autoencoders and Generative Adversarial Networks](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW4/pract/GAN-VAE.ipynb)
 
 In this notebook, I implement and train two foundational generative modeling paradigms— a Variational Autoencoder (VAE) and a Generative Adversarial Network (GAN)—using the MNIST handwritten–digit dataset. For the VAE, I define an encoder–decoder architecture, optimize the combined reconstruction and KL‐divergence loss, and visualize both reconstructed and newly sampled digits from the learned latent space. For the GAN, I build a generator–discriminator pair, train them in an adversarial loop while tracking loss curves, and sample novel digits by feeding random noise into the generator. Finally, I compare the two models by displaying side‐by‐side sample grids and even use the trained discriminator to quantify the realism of GAN outputs, highlighting the trade-offs between probabilistic and adversarial approaches to image synthesis.
 
-### [Defensive Distillation & Black-Box Attacks on CIFAR-10 Classifiers](https://github.com/amirezzati/spml/blob/main/homeworks/hw3/pract/SPML_PHW3.ipynb)
+### [Defensive Distillation & Black-Box Attacks](https://github.com/amirezzati/spml/blob/main/homeworks/hw3/pract/SPML_PHW3.ipynb)
 
 In this notebook, I first implement defensive distillation on a ResNet-based CIFAR-10 classifier by training a “teacher” network at a high softmax temperature to produce soft labels, then training an identical “student” network on those soft targets before evaluating it at temperature 1. This process strengthens the model against gradient-based adversarial perturbations. Next, I explore black-box attack methods—crafting adversarial examples without access to model gradients—by using a transfer-based attack from a surrogate model and a decision-based attack (boundary attack) to fool both the vanilla and distilled classifiers. Finally, I compare clean‐accuracy, attack success rates, and visualize representative adversarial samples to quantify how effective distillation is at mitigating black-box adversarial threats
+
+### [Model Extraction via Knowledge Distillation](https://github.com/amirezzati/spml/blob/main/homeworks/hw4/pract/SPML_PHW4_Extraction.ipynb)
+
+In this notebook, I first load and preprocess the CIFAR-100 dataset (resizing images to 224×224) and train a pre-trained ResNet-34 “victim” classifier on it. Then, I implement a “student” network and perform model extraction through knowledge distillation: the victim produces soft logits over batches of inputs, and the student is trained to match those logits using a KL-divergence loss. Finally, I evaluate the extracted student model against the original on clean test data, illustrating how well a distilled copy can approximate the teacher’s performance while operating under a black-box query paradigm.
+
+### [Data Poisoning & Backdoor Attacks](https://github.com/amirezzati/spml/blob/main/homeworks/hw4/pract/SPML_PHW4_Poisoning.ipynb)
+
+In this notebook, I first fine-tune a pre-trained ResNet18 on the CIFAR-10 dataset to establish a clean baseline. I then implement a data poisoning attack by generating adversarial “poison” examples that are mislabeled into a target class, injecting them into the training set, and retraining the network—visualizing how the poison shifts the model’s feature space. Next, I craft a watermark-based backdoor by embedding a trigger pattern into a subset of images, constructing a backdoored dataloader, and training the model to associate the trigger with an attacker’s label. Finally, I evaluate both clean and poisoned/backdoored models, demonstrating the effectiveness and stealth of these two classes of training-time attacks.
+
 
 ### [Comprehensive Adversarial Attacks and Robust Training on CIFAR-10 with ResNet18](https://github.com/amirezzati/spml/blob/main/homeworks/hw2/pract/Adversarial.ipynb)
 
