@@ -30,3 +30,26 @@ In this notebook, I implement and train two foundational generative modeling par
 In this project, I implemented and trained a compact, decoder-only Transformer (“SimpleGPT”) from the ground up using PyTorch. Beginning with raw text data ingestion and vocabulary construction, I built core components—including masked self-attention heads, multi-head attention, feed-forward layers, and positional embeddings—then assembled them into a SimpleGPT architecture. After configuring training hyperparameters, I optimized the model on the dataset for autoregressive language modeling, and demonstrated its capability by generating sample text continuations. This exercise deepened my understanding of Transformer internals and highlighted how even a scaled-down GPT can learn meaningful sequence patterns.
 
 
+
+## Medical Image Analysis Projects
+### [Graph Neural Network](https://github.com/amirezzati/iabi/blob/main/homeworks/HW4/pract/HW4_GNN.ipynb)
+In this notebook, I implemented three different sections:
+1. Nuclei extraction
+2. Graph convolutional network     
+   I implemented a GCN model to generate node embeddings of graph.       
+3. Graph prediction model                     
+   I implemented a GCN Graph Prediction model using the node embeddings from the GCN model and global pooling to create graph-level embeddings.
+
+### [Interpretability](https://github.com/amirezzati/iabi/blob/main/homeworks/HW5/pract/HW5_Interpretability.ipynb)       
+In this notebook, I used Grad-CAM technique as an interpretability algorithm that aids in comprehending the model's decision-making process, debugging, and explaining predictions to non-technical stakeholders. I visualized attention maps over CT-scan images to find out ResNet model focus on which features for classification.       
+
+### [Classification using Swin Transformer](https://github.com/amirezzati/iabi/blob/main/homeworks/HW5/pract/HW5_BreastMNIST_Classification.ipynb)       
+This task involves using the Swin Transformer, a cutting-edge neural network model, to distinguish between benign (including normal) and malignant cases in BreastMNIST dataset. There is a common challenge of class imbalance in this task, and I used weighted BCE loss to overcome this problem and improve the model.        
+ 
+
+### [2D and 3D Segmentation](https://github.com/amirezzati/iabi/blob/main/homeworks/HW5/pract/Segmentation/HW5_Segmentation.ipynb)
+In this notebook, I implemented both 2D-UNet and 3D-UNet models to perform segmentation on a set of 30 volumetric medical images.         
+     
+
+### [Medical Image Segmentation with Diffusion Model](https://github.com/amirezzati/iabi/blob/main/homeworks/HW6/pract/DDPM_MRI_Seg.ipynb)
+In this notebook, I had implemented a DPM-based model for brain tumor segmentation over MRI images based on "MedSegDiff: Medical Image Segmentation with Diffusion Probabilistic Model" paper.        
