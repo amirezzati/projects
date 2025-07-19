@@ -18,3 +18,15 @@ This project demonstrates how to adapt a large-scale diffusion model to capture 
 ### [Denoising Diffusion Probabilistic Models for CAPTCHA Image Synthesis](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW4/pract/DDPM.ipynb)
 
 In this project, I built a full DDPM (Denoising Diffusion Probabilistic Model) pipeline from scratch to learn and generate CAPTCHA-style images. I started by defining a custom Captcha VisionDataset to load real-world CAPTCHA samples, then implemented a noise scheduler to gradually corrupt images and a UNet-inspired denoiser to predict and remove that noise. Training consisted of minimizing the mean-squared error between the model’s noise predictions and the true noise over 1,000 diffusion timesteps. After training for multiple epochs, I ran the reverse diffusion process to sample novel CAPTCHA images from pure Gaussian noise, demonstrating the model’s ability to synthesize realistic, human-readable text patterns. Generated samples were visualized alongside real data, and the final trained weights were saved for deployment or further experimentation.
+
+
+### [Exploring Variational Autoencoders and Generative Adversarial Networks on MNIST](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW4/pract/GAN-VAE.ipynb)
+
+In this notebook, I implement and train two foundational generative modeling paradigms— a Variational Autoencoder (VAE) and a Generative Adversarial Network (GAN)—using the MNIST handwritten–digit dataset. For the VAE, I define an encoder–decoder architecture, optimize the combined reconstruction and KL‐divergence loss, and visualize both reconstructed and newly sampled digits from the learned latent space. For the GAN, I build a generator–discriminator pair, train them in an adversarial loop while tracking loss curves, and sample novel digits by feeding random noise into the generator. Finally, I compare the two models by displaying side‐by‐side sample grids and even use the trained discriminator to quantify the realism of GAN outputs, highlighting the trade-offs between probabilistic and adversarial approaches to image synthesis.
+
+
+### [From-Scratch SimpleGPT: A Mini Decoder-Only Transformer for Text Generation](https://github.com/amirezzati/deep-learning/blob/main/homeworks/HW3/pract/SimpleGPT.ipynb)
+
+In this project, I implemented and trained a compact, decoder-only Transformer (“SimpleGPT”) from the ground up using PyTorch. Beginning with raw text data ingestion and vocabulary construction, I built core components—including masked self-attention heads, multi-head attention, feed-forward layers, and positional embeddings—then assembled them into a SimpleGPT architecture. After configuring training hyperparameters, I optimized the model on the dataset for autoregressive language modeling, and demonstrated its capability by generating sample text continuations. This exercise deepened my understanding of Transformer internals and highlighted how even a scaled-down GPT can learn meaningful sequence patterns.
+
+
